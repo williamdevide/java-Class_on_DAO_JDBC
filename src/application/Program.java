@@ -20,8 +20,12 @@ public class Program {
 		System.out.println(obj2);
 		
 		SellerDao sellerDao = DaoFactory.createSellerDao();
-		DepartmentDao departmentDao = DaoFactory.createDepartmentDao();
+		Seller seller = sellerDao.findById(3);
+		System.out.println(seller);
 		
+		DepartmentDao departmentDao = DaoFactory.createDepartmentDao();
+		Department department = departmentDao.findById(2);
+		System.out.println(department);
 	}
 
 }
